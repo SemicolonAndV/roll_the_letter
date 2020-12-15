@@ -21,7 +21,7 @@ def roll(list_of_names):
             letter_stats[letter][name] = score
     return letter_stats
     
-if name == "__main__":
+if __name__ == "__main__":
     result = roll(load_names('names.txt'))
     for k, v in result.items():
         print(f"{k}: {sorted(v.items(), key=lambda x: x[1], reverse=True)}\n")
